@@ -1,0 +1,213 @@
+/*
+ * Copyright 2020 Vasiliy Vdovin
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: var(--font-size);
+	line-height: calc(var(--font-size) * 1.5);
+}
+
+nav > a {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+}
+
+nav > a::after, nav > a::before {
+	position: absolute;
+	transition: 300ms transform ease-out;
+	bottom: 0;
+	left: -1px;
+	right: -1px;
+	content: "";
+	height: 4px;
+	display: block;
+	border-radius: 2px;
+}
+
+nav > a::after {
+	transform: scaleX(0);
+}
+
+#main-header {
+	position: fixed;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	right: 0;
+	left: 0;
+	--height: 64px;
+	height: var(--height);
+	z-index: 2;
+}
+
+#main-header-conent {
+	position: relative;
+	width: var(--conent-width);
+	height: calc(var(--height) * 0.75);
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#logo {
+	position: relative;
+	width: 48px;
+}
+
+#logo > svg {
+	width: calc(var(--height) * 0.75);
+	height: calc(var(--height) * 0.75);
+}
+
+#main-header-conent > nav {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+
+#main-header-conent  > nav > a {
+	display: block;
+	line-height: calc(var(--height) * 0.75);
+}
+
+#main-header-conent  > nav > a:not(:first-child) {
+	margin-left: 12px;
+}
+
+section {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: center;
+	min-height: 100vh;
+	width: auto;
+	overflow: hidden;
+	--offset: 0px;
+}
+
+section:first-child .conent {
+	margin-top: 64px;
+}
+
+.conent {
+	width: var(--conent-width);
+}
+
+section::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: "";
+	z-index: -1;
+	transform: translateY(calc(var(--offset) * 0.5));
+}
+
+.not-supported {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: gray;
+	z-index: 10;
+}
+
+body#noLoaded:before {
+	content: "";
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	display: block;
+	background-color: rgb(76, 122, 37);
+}
+
+body#noLoaded:after {
+	content: "";
+	position: fixed;
+	display: block;
+	top: 50%;
+	left: 50%;
+	margin-top: -32px;
+	margin-left: -32px;
+	border-radius: 50%;
+	width: 64px;
+	height: 64px;
+	font-size: 10px;
+	transform: translateZ(0);
+	border-style: solid;
+	border-width: 8px;
+	border-color: rgba(255, 255, 255, 0.418);
+	border-top-color: rgba(255, 255, 255, 0.945);
+	animation: spinner 600ms infinite linear;
+	z-index: 101;
+}
+
+@media (hover: hover) {
+
+	a:hover::after {
+		transform: scaleX(1);
+	}
+	
+	a:active::after {
+		transform: scale(0.5);
+	}
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1680px) {
+
+	:root {
+		--conent-width: 85.714286vw;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+
+	:root {
+		--conent-width: calc(100vw - 6px);
+	}
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* TEMP!!! */
+/* #map {
+	height: 90%;
+	width: 100%;
+} */
