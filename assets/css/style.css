@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap');
 
 :root {
 	--conent-width: 1440px;
@@ -30,6 +30,10 @@ body {
 	background-image: linear-gradient(90deg, hsl(0, 100%, 10%) 0, hsl(0deg, 0%, 0%) 50%, hsl(216, 100%, 10%) 100%);
 }
 
+#main-header {
+	/* background-image: linear-gradient(0deg, hsla(0, 100%, 100%, 1) 0, hsla(0, 0%, 100%, 0) 100%); */
+}
+
 nav > a::after {
 	background-color: gold;
 }
@@ -43,18 +47,29 @@ nav > a::before {
 
 }
 
-.main-product h1 {
-	position: relative;
-	display: block;
+.main-product h1, .main-product h2 {
 	background-image: linear-gradient(90deg, hsl(0, 100%, 50%) 0, hsl(216, 100%, 50%) 100%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent; 
 	-moz-text-fill-color: transparent;
-	font-size: 100px;
-	font-weight: 900;
-	margin-top: 25vh;
+}
+.main-product h1 {
+	position: relative;
+	display: block;
+
+	font-size: 300px;
+	letter-spacing: 50px;
+	font-weight: 100;
+	margin-top: 5vh;
+}
+
+.main-product h2 {
+	letter-spacing: 11px;
+	font-size: 60px;
+	font-weight: 300;
+	
 }
 
 .main-product .conent {
