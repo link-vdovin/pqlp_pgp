@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
 
 :root {
 	--conent-width: 1440px;
@@ -27,7 +27,7 @@ body {
 	font-family: 'Lato', sans-serif;
 	color: white;
 	background-color: black;
-	background-image: linear-gradient(90deg, hsl(0, 100%, 15%) 0, hsl(0deg, 0%, 0%) 50%, hsl(216, 100%, 15%) 100%);
+	background-image: linear-gradient(90deg, hsl(0, 100%, 10%) 0, hsl(0deg, 0%, 0%) 50%, hsl(216, 100%, 10%) 100%);
 }
 
 nav > a::after {
@@ -36,6 +36,11 @@ nav > a::after {
 
 nav > a::before {
 	background-color: grey;
+}
+
+.ms {
+	perspective: 300px;
+
 }
 
 .main-product h1 {
@@ -47,8 +52,9 @@ nav > a::before {
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent; 
 	-moz-text-fill-color: transparent;
-	font-size: 2.8em;
-	font-weight: 300;
+	font-size: 100px;
+	font-weight: 900;
+	margin-top: 25vh;
 }
 
 .main-product .conent {
@@ -62,8 +68,13 @@ nav > a::before {
 .main-product .product-image {
 	position: relative;
 	display: block;
-	--size: calc(var(--vh) * 0.8);
 	height: var(--size);
 	width: calc(var(--size) / 1.6);
-	bottom: 0;
+}
+
+.main-product.v-50 .product-image {
+	--size: var(--vh);
+}
+.main-product:not(.v-50) .product-image {
+	--size: 50vh;
 }
