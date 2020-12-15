@@ -67,7 +67,7 @@ class PQLPL {
 			if (percent >= 0) {
 
 				ms.style.setProperty("--offset", offset + "px");
-				ms.style.setProperty("--percent", (percent * 100) + "%");
+				ms.style.setProperty("--percent", (percent * 100) + "vh");
 			}
 
 			if (percent >= 0.25) {
