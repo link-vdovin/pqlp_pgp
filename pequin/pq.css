@@ -19,11 +19,6 @@
 	padding: 0;
 }
 
-body {
-	font-size: var(--font-size);
-	line-height: calc(var(--font-size) * 1.5);
-}
-
 nav > a {
 	position: relative;
 	display: inline-block;
@@ -107,7 +102,9 @@ section {
 	width: auto;
 	overflow: hidden;
 	--offset: 0px;
-	--percent: 0vh;
+	--percent: 0%;
+	--vh: 0vh;
+	--deg: 0deg;
 }
 
 section:first-child .conent {
