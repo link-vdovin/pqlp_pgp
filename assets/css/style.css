@@ -18,7 +18,6 @@
 
 :root {
 	--conent-width: 1440px;
-
 	--color-active: #D93E3E;
 	--color-passive: #E4E4E4;
 }
@@ -45,20 +44,23 @@ nav > a::before {
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent; 
 	-moz-text-fill-color: transparent;
+	letter-spacing: 0;
+}
+
+.main-product {
+	--text-size: 300px
 }
 
 .main-product h1 {
 	position: relative;
 	display: inline-block;
-	font-size: 300px;
-	letter-spacing: 50px;
+	font-size: var(--text-size);
 	font-weight: 900;
 	margin-top: 5vh;
 }
 
 .main-product h2 {
-	letter-spacing: 9px;
-	font-size: 75px;
+	font-size: calc(var(--text-size) * 0.25);
 	font-weight: 100;
 }
 
@@ -85,22 +87,32 @@ nav > a::before {
 	--size: 50vh;
 }
 
-@media only screen and (max-width: 920px) {
+@media only screen and (min-width: 641px) and (max-width: 920px) {
 
-	.main-product h1 {
-		font-size: 100px;
-		letter-spacing: 10px;
+	.main-product {
+		--text-size: 150px
 	}
-	
-	.main-product h2 {
-		display: none;
+
+	.main-product.v-50 .product-image {
+		--size: calc(var(--vh) * 0.75);
+	}
+
+	.main-product:not(.v-50) .product-image {
+		--size: 37.5vh;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+
+	.main-product {
+		--text-size: 100px
 	}
 
 	.main-product.v-50 .product-image {
 		--size: calc(var(--vh) * 0.6);
 	}
-	
+
 	.main-product:not(.v-50) .product-image {
 		--size: 30vh;
 	}
-} 
+}
