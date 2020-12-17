@@ -26,7 +26,7 @@ body {
 	font-family: 'Lato', sans-serif;
 	color: white;
 	background-color: black;
-	background-image: linear-gradient(90deg, hsl(0, 100%, 10%) 0, hsl(0deg, 0%, 0%) 50%, hsl(216, 100%, 10%) 100%);
+	background-image: linear-gradient(90deg, hsl(0, 100%, 15%) 0, hsl(0deg, 0%, 0%) 15%, hsl(0deg, 0%, 0%) 85%, hsl(216, 100%, 15%) 100%);
 }
 
 nav > a::after {
@@ -85,6 +85,12 @@ nav > a::before {
 
 .main-product:not(.v-50) .product-image {
 	--size: 50vh;
+}
+
+.slider-3d {
+	--height: 50vh;
+	--proportion: 0.73913043;
+	background-color: gray;
 }
 
 @media only screen and (min-width: 641px) and (max-width: 920px) {
