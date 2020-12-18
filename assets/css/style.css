@@ -88,8 +88,8 @@ nav > a::before {
 }
 
 .slider-3d {
-	--height: 50vh;
-	--proportion: 0.73913043;
+	--height: 640px;
+	--proportion: 0.65217391;
 	background-color: gray;
 }
 
