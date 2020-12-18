@@ -110,6 +110,9 @@ nav > a::before {
 
 @media only screen and (max-width: 640px) {
 
+	body {
+		background-image: none
+	}
 	.main-product {
 		--text-size: 100px
 	}
@@ -121,4 +124,5 @@ nav > a::before {
 	.main-product:not(.v-50) .product-image {
 		--size: 30vh;
 	}
+
 }
