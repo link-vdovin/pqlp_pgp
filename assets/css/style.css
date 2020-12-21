@@ -88,9 +88,12 @@ nav > a::before {
 }
 
 .slider-3d {
-	--height: 50vh;
-	--proportion: 0.65217391;
-	background-color: gray;
+	--size: 920px;
+}
+
+.slider-3d::before{
+	background-color: black;
+	background-image: url("/assets/images/pgp_3d_980.jpg");
 }
 
 @media only screen and (min-width: 641px) and (max-width: 920px) {
@@ -123,6 +126,42 @@ nav > a::before {
 
 	.main-product:not(.v-50) .product-image {
 		--size: 30vh;
+	}
+
+}
+
+@media only screen and (min-width: 1081px) and (max-height: 1440px) {
+
+	.slider-3d {
+		--size: 700px;
+	}
+
+	.slider-3d::before {
+		background-image: url("/assets/images/pgp_3d_720.jpg");
+	}
+
+}
+
+@media only screen and (min-width: 641px) and (max-height: 1080px) {
+
+	.slider-3d {
+		--size: 520px;
+	}
+
+	.slider-3d::before {
+		background-image: url("/assets/images/pgp_3d_540.jpg");
+	}
+
+}
+
+@media only screen and (max-height: 640px) {
+
+	.slider-3d {
+		--size: 320px;
+	}
+
+	.slider-3d::before {
+		background-image: url("/assets/images/pgp_3d_320.jpg");
 	}
 
 }
