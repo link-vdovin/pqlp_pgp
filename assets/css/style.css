@@ -93,7 +93,7 @@ nav > a::before {
 
 .slider-3d::before{
 	background-color: black;
-	background-image: url("/assets/images/pgp_3d_980.jpg");
+	background-image: url("../images/pgp_3d_980.jpg");
 }
 
 @media only screen and (min-width: 641px) and (max-width: 920px) {
@@ -137,7 +137,7 @@ nav > a::before {
 	}
 
 	.slider-3d::before {
-		background-image: url("/assets/images/pgp_3d_720.jpg");
+		background-image: url("../images/pgp_3d_720.jpg");
 	}
 
 }
@@ -149,7 +149,7 @@ nav > a::before {
 	}
 
 	.slider-3d::before {
-		background-image: url("/assets/images/pgp_3d_540.jpg");
+		background-image: url("../images/pgp_3d_540.jpg");
 	}
 
 }
@@ -161,7 +161,7 @@ nav > a::before {
 	}
 
 	.slider-3d::before {
-		background-image: url("/assets/images/pgp_3d_320.jpg");
+		background-image: url("../images/pgp_3d_320.jpg");
 	}
 
 }
