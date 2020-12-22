@@ -20,6 +20,7 @@ class PQLPL {
 
 		this.mhHeight = 0;
 		this.map = null; // Google map element.
+		this.sliders3d = [];
 
 		PQLPL.listeners();
 	}
@@ -102,29 +103,29 @@ class PQLPL {
 
 		});
 
-		Array.prototype.forEach.call(document.getElementsByClassName("slider-3d"), function(slider) {
+		Array.prototype.forEach.call(PQLPL.sliders3d, function(slider) {
 
 			const rect = slider.getBoundingClientRect();
 
-				const frames = slider.dataset.frames;
+			const pictures = slider.getElementsByTagName("picture");
 
-				const percent = rect.top / window.innerHeight;
+			const frames = parseInt(pictures.length);
 
-				const frame = (slider.clientWidth * parseInt(frames * percent)) * -1;
+			const frame = parseInt(frames * (rect.top / window.innerHeight));
 
-				if (percent > 1) {
+			const index = frame < 0 ? 0 : frame >= frames ? frames - 1 : frame;
 
-					slider.style.setProperty("--frame", ((slider.clientWidth * frames) * -1) + "px");
-				
-				} else if (percent < 0 ) {
+			const picture = pictures.item(index);
 
-					slider.style.setProperty("--frame", 0 + "px");
 
-				} else {
+			if(slider.picture != null) {
 
-					slider.style.setProperty("--frame", frame + "px");
+				slider.picture.classList.remove("visible");
+			}
 
-				}
+			picture.classList.add("visible");
+
+			slider.picture = picture;
 
 		});
 
@@ -132,6 +133,8 @@ class PQLPL {
 	}
 
 	static init() {
+
+		PQLPL.sliders3d = document.getElementsByClassName("slider-3d");
 
 		PQLPL.daemon();
 	}
