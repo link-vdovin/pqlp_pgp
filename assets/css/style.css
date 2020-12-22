@@ -79,6 +79,14 @@ nav > a::before {
 	width: calc(var(--size) / 1.6);
 }
 
+.content.product3d {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	flex-flow: column;
+}
+
 .main-product.v-50 .product-image {
 	--size: var(--vh);
 }
@@ -88,9 +96,9 @@ nav > a::before {
 }
 
 .slider-3d {
-	--size: 50vh;
+	--size: 80vh;
 	--max-size: 1280px;
-	--proportion: 0.765625;
+	--proportion: 0.73913043;
 }
 
 @media only screen and (min-width: 641px) and (max-width: 920px) {
@@ -126,3 +134,22 @@ nav > a::before {
 	}
 
 }
+
+@media only screen and (max-height: 760px) {
+
+	.slider-3d {
+		--size: 60vh;
+		--max-size: 640px;
+	}
+
+}
+
+@media only screen and (max-height: 1080px) {
+
+	.slider-3d {
+		--size: 75vh;
+		--max-size: 920px;
+	}
+
+}
+
