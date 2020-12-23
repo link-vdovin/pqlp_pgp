@@ -21,6 +21,7 @@ class PQLPL {
 		this.mhHeight = 0;
 		this.map = null; // Google map element.
 		this.sliders3d = [];
+		this.listenItems = [];
 
 		PQLPL.listeners();
 	}
@@ -129,12 +130,30 @@ class PQLPL {
 
 		});
 
+		Array.prototype.forEach.call(PQLPL.listenItems, function(listen) {
+
+			if (listen.dataset.listen == "position") {
+
+				const rect = listen.getBoundingClientRect();
+
+				if ((rect.top - (rect.height / 2)) < (window.innerHeight / 2)) {
+
+					listen.classList.add("center-line");
+
+				}
+
+				console.debug(rect.top, rect.height, window.innerHeight);
+			}
+
+		});
+
 		requestAnimationFrame(PQLPL.daemon);
 	}
 
 	static init() {
 
 		PQLPL.sliders3d = document.getElementsByClassName("slider-3d");
+		PQLPL.listenItems = document.getElementsByClassName("listen");
 
 		PQLPL.daemon();
 	}
