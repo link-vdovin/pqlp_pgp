@@ -45,8 +45,6 @@ nav > a::before {
 	-webkit-text-fill-color: transparent; 
 	-moz-text-fill-color: transparent;
 	letter-spacing: 0;
-
-	/* transform: translateZ(calc(-300px * calc(1 - var(--ppp)))); */
 }
 
 .main-product {
