@@ -18,8 +18,8 @@
 
 :root {
 	--content-width: 1440px;
-	--color-active: #D93E3E;
-	--color-passive: #E4E4E4;
+	--color-active: hsl(0, 100%, 50%);
+	--color-passive: white;
 }
 
 body {
@@ -28,12 +28,13 @@ body {
 	background-color: black;
 }
 
-nav > a::after {
-	background-color: gold;
+#main-header {
+	background-image: linear-gradient(90deg, hsla(0, 100%, 50%, 0.9) 0, hsla(216, 100%, 50%, 0.9) 100%);
 }
 
-nav > a::before {
-	background-color: grey;
+#main-header-content  > nav > a {
+	color: white;
+	font-weight: 900;
 }
 
 .main-product h1, .main-product h2 {

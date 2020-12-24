@@ -39,6 +39,12 @@ nav > a::after, nav > a::before {
 
 nav > a::after {
 	transform: scaleX(0);
+	background-color: var(--color-active);
+}
+
+nav > a::before {
+	background-color: var(--color-passive);
+	opacity: 0.6;
 }
 
 #main-header {
