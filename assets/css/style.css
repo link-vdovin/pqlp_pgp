@@ -26,7 +26,6 @@ body {
 	font-family: 'Lato', sans-serif;
 	color: white;
 	background-color: black;
-	background-image: linear-gradient(90deg, hsl(0, 100%, 15%) 0, hsl(0deg, 0%, 0%) 15%, hsl(0deg, 0%, 0%) 85%, hsl(216, 100%, 15%) 100%);
 }
 
 nav > a::after {
@@ -154,6 +153,21 @@ nav > a::before {
 	opacity: 1;
 }
 
+@media only screen and (min-width: 1280px) {
+
+	body {
+		background-image: linear-gradient(90deg, hsl(0, 100%, 15%) 0, hsl(0deg, 0%, 0%) 15%, hsl(0deg, 0%, 0%) 85%, hsl(216, 100%, 15%) 100%);
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+
+	.content.description p {
+		font-size: 30px;
+		letter-spacing: 1px;
+	}
+}
+
 @media only screen and (min-width: 641px) and (max-width: 920px) {
 
 	.main-product {
@@ -166,8 +180,15 @@ nav > a::before {
 	body {
 		background-image: none
 	}
+
 	.main-product {
 		--text-size: 100px
+	}
+
+	.content.description p {
+		font-size: 20px;
+		letter-spacing: 0;
+		font-weight: 900;
 	}
 
 }
@@ -189,4 +210,3 @@ nav > a::before {
 	}
 
 }
-
