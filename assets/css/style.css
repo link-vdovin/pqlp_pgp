@@ -76,6 +76,7 @@ body {
 }
 
 .main-product .product-image {
+	margin-top: 5vh;
 	position: relative;
 	display: block;
 	transform: translateZ(calc(-300px * calc(1 - var(--p))));
