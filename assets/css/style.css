@@ -92,13 +92,13 @@ nav > a::before {
 .content.description {
 	display: flex;
 	flex-wrap: nowrap;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
 	flex-flow: column;
 }
 
 .content .line-position {
-	transition: transform 1000ms ease-out;
+	transition: transform 600ms ease-out;
 	transform: scale(0);
 }
 
@@ -106,7 +106,7 @@ nav > a::before {
 	transform: scale(1);
 }
 
-.content.description p, .content.footer p {
+.content.description p {
 	background-image: linear-gradient(90deg, hsl(0, 100%, 50%) 0, hsl(216, 100%, 50%) 100%);
 	display: inline-block; 
 	background-clip: text;
@@ -114,25 +114,25 @@ nav > a::before {
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent; 
 	-moz-text-fill-color: transparent;
-	font-size: 60px;
+	font-size: 3vw;
+	line-height: calc(3vw + 5vh);
 	font-weight: 300;
-	letter-spacing: 2px;
 }
 
 .slider-3d {
-	--size: 80vh;
+	--size: 90vw;
 	--max-size: 1280px;
 	--proportion: 0.73913043;
 }
 
 .ms.footer .content.description {
 	perspective: 100px;
-	perspective-origin: center;
+	perspective-origin: bottom;
 }
 
 .ms.footer .line {
 	transition-property: all;
-	transition-duration: 1000ms;
+	transition-duration: 1200ms;
 	transition-timing-function: ease-out;
 	transform: translateZ(-1000px);
 	opacity: 0;
@@ -160,14 +160,6 @@ nav > a::before {
 	}
 }
 
-@media only screen and (max-width: 1280px) {
-
-	.content.description p {
-		font-size: 30px;
-		letter-spacing: 1px;
-	}
-}
-
 @media only screen and (min-width: 641px) and (max-width: 920px) {
 
 	.main-product {
@@ -186,9 +178,9 @@ nav > a::before {
 	}
 
 	.content.description p {
-		font-size: 20px;
-		letter-spacing: 0;
 		font-weight: 900;
+		font-size: 6vw;
+		line-height: calc(12vw + 5vh);
 	}
 
 }
@@ -196,7 +188,6 @@ nav > a::before {
 @media only screen and (max-height: 760px) {
 
 	.slider-3d {
-		--size: 60vh;
 		--max-size: 640px;
 	}
 
@@ -205,7 +196,6 @@ nav > a::before {
 @media only screen and (max-height: 1080px) {
 
 	.slider-3d {
-		--size: 75vh;
 		--max-size: 920px;
 	}
 
