@@ -121,13 +121,13 @@ body {
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent; 
 	-moz-text-fill-color: transparent;
-	font-size: 6vw;
+	font-size: 6vmin;
 	font-weight: 300;
 	text-align: center;
 }
 
 .slider-3d {
-	--size: 90vw;
+	--size: 90vmin;
 	--max-size: 1280px;
 	--proportion: 0.73913043;
 }
@@ -194,7 +194,7 @@ body#noLoaded:after {
 	}
 
 	.content.description p {
-		font-size: 12vw;
+		font-size: 12vmin;
 	}
 
 }
