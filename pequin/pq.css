@@ -183,7 +183,6 @@ body#noLoaded:before {
 	left: 0;
 	z-index: 100;
 	display: block;
-	background-color: rgb(76, 122, 37);
 }
 
 body#noLoaded:after {
@@ -201,8 +200,6 @@ body#noLoaded:after {
 	transform: translateZ(0);
 	border-style: solid;
 	border-width: 8px;
-	border-color: rgba(255, 255, 255, 0.418);
-	border-top-color: rgba(255, 255, 255, 0.945);
 	animation: spinner 600ms infinite linear;
 	z-index: 101;
 }
