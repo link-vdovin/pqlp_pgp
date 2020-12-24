@@ -100,16 +100,16 @@ nav > a::before {
 	flex-flow: column;
 }
 
-.content.description div {
-	transition: transform 600ms ease-out;
+.content .line-position {
+	transition: transform 1000ms ease-out;
 	transform: scale(0);
 }
 
-.content.description .center-line {
+.content .line-position.center-line {
 	transform: scale(1);
 }
 
-.content.description p {
+.content.description p, .content.footer p {
 	background-image: linear-gradient(90deg, hsl(0, 100%, 50%) 0, hsl(216, 100%, 50%) 100%);
 	display: inline-block; 
 	background-clip: text;
@@ -118,13 +118,42 @@ nav > a::before {
 	-webkit-text-fill-color: transparent; 
 	-moz-text-fill-color: transparent;
 	font-size: 60px;
-	font-weight: 900;
+	font-weight: 300;
+	letter-spacing: 2px;
 }
 
 .slider-3d {
 	--size: 80vh;
 	--max-size: 1280px;
 	--proportion: 0.73913043;
+}
+
+.ms.footer .content.description {
+	perspective: 100px;
+	perspective-origin: center;
+}
+
+.ms.footer .line {
+	transition-property: all;
+	transition-duration: 1000ms;
+	transition-timing-function: ease-out;
+	transform: translateZ(-1000px);
+	opacity: 0;
+}
+
+.ms.footer.v-25 .line-1 {
+	transform: translateZ(0);
+	opacity: 1;
+}
+
+.ms.footer.v-50 .line-2 {
+	transform: translateZ(0);
+	opacity: 1;
+}
+
+.ms.footer.v-75 .line-3 {
+	transform: translateZ(0);
+	opacity: 1;
 }
 
 @media only screen and (min-width: 641px) and (max-width: 920px) {
